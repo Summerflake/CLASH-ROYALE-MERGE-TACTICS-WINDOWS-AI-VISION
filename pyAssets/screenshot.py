@@ -39,11 +39,11 @@ def screenshotLocation(x, y, width, height, save_path):
 # print(save_path)
 # screenshotLocation(x, y, width, height, save_path)
 
-def screenshot(localstorage_key):
+def screenshot(localstorage_key, filename):
     x, y, width, height = read_local_storage(localstorage_key)
     desktop = os.path.join(os.environ['USERPROFILE'], 'Desktop')
-    save_path = os.path.join(desktop, 'screenshot10.png')
+    save_path = os.path.join(desktop, filename)
     print(save_path)
     screenshotLocation(x, y, width, height, save_path)
 
-screenshot("window_pos_card_deck")
+# screenshot("window_pos_card_deck", "screenshot10.png")
